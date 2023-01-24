@@ -105,11 +105,11 @@ function wp_api_data_meta_box_callback( $post ) {
         .tabcontent {display: none;padding: 6px 12px;border: 1px solid #ccc;border-top: none;}
 	</style>
 	<div class="tab">
-		<button class="tablinks" onclick="openCity(event, 'PostData')">Post Data</button>
-		<button class="tablinks" onclick="openCity(event, 'AuthorData')">Author Data</button>
-		<button class="tablinks" onclick="openCity(event, 'CategoryData')">Category Data</button>
-		<button class="tablinks" onclick="openCity(event, 'TagData')">Tag Data</button>
-		<button class="tablinks" onclick="openCity(event, 'SiteData')">Site Data</button>
+		<button class="tablinks" onclick="openTab(event, 'PostData')">Post Data</button>
+		<button class="tablinks" onclick="openTab(event, 'AuthorData')">Author Data</button>
+		<button class="tablinks" onclick="openTab(event, 'CategoryData')">Category Data</button>
+		<button class="tablinks" onclick="openTab(event, 'TagData')">Tag Data</button>
+		<button class="tablinks" onclick="openTab(event, 'SiteData')">Site Data</button>
 	</div>
 
 	<div id="PostData" class="tabcontent" style="display: block;">
@@ -320,7 +320,7 @@ function wp_api_data_meta_box_callback( $post ) {
     </div>
 
 	<script>
-        function openCity(evt, cityName) {
+        function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
@@ -330,7 +330,7 @@ function wp_api_data_meta_box_callback( $post ) {
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-            document.getElementById(cityName).style.display = "block";
+            document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
 	</script>
