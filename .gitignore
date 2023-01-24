@@ -46,3 +46,9 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+# Git rid of PHPStorm's .idea folder
+/.idea
+
+# Include the plugin
+!wp-inspect-post.php
